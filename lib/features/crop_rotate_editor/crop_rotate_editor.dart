@@ -2038,7 +2038,7 @@ class CropCircleEditorState extends State<CropCircleEditor>
           onPressed: done,
           padding: const EdgeInsets.symmetric(horizontal: 14),
           child: Text(
-            initConfigs.applyText,
+            i18n.done,
             style: const TextStyle(
               color: Colors.white,
               fontSize: 16,

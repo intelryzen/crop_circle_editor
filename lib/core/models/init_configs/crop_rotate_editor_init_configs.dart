@@ -64,7 +64,6 @@ class CropRotateEditorInitConfigs extends EditorInitConfigs {
     this.onDone,
     this.enablePopWhenDone = true,
     this.enableFakeHero = false,
-    this.applyText = "Apply",
   });
 
   /// Indicates whether the widget should automatically pop from the navigation
@@ -108,7 +107,4 @@ class CropRotateEditorInitConfigs extends EditorInitConfigs {
   /// );
   /// ```
   final bool enableFakeHero;
-
-  /// The text displayed on the confirmation button.
-  final String applyText;
 }

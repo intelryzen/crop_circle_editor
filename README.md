@@ -63,7 +63,6 @@ class _CircularCropImageEditorState extends State<CircularCropImageEditor> {
         configs: _editorConfigs,
         enablePopWhenDone: true,
         convertToUint8List: true,
-        applyText: "적용",
       ),
     );
   }

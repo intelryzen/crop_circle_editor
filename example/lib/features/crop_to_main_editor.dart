@@ -39,11 +39,13 @@ class _CropToMainEditorExampleState extends State<CropToMainEditorExample>
     with ExampleHelperState<CropToMainEditorExample> {
   final ProImageEditorConfigs _editorConfigs = ProImageEditorConfigs(
     designMode: platformDesignMode,
+    i18n: I18n(
+      done: "적용",
+    ),
     cropRotateEditor:  CropRotateEditorConfigs(
       initAspectRatio: 1,
       provideImageInfos: true,
       canChangeAspectRatio: false,
-
       style: CropRotateEditorStyle(
         helperLineColor: Colors.white,
         cropCornerColor: Colors.white,
@@ -66,6 +68,7 @@ class _CropToMainEditorExampleState extends State<CropToMainEditorExample>
       kImageEditorExampleAssetPath,
       key: _cropEditorKey,
       initConfigs: CropRotateEditorInitConfigs(
+
         theme: Theme.of(context),
         configs: _editorConfigs,
         enablePopWhenDone: true,
