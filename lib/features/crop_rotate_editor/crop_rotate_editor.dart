@@ -2045,7 +2045,6 @@ class CropCircleEditorState extends State<CropCircleEditor>
             style: const TextStyle(
               color: Colors.white,
               fontSize: 16,
-              fontWeight: FontWeight.w600,
             ),
           ),
         ),
