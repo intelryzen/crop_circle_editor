@@ -2006,8 +2006,7 @@ class CropCircleEditorState extends State<CropCircleEditor>
                 body: Center(
                   child: SizedBox(
                     width: constraints.maxWidth *
-                        (cropRotateEditorConfigs.maxWidthFactor ??
-                            (!kIsWeb && Platform.isAndroid ? 0.9 : 1)),
+                        (cropRotateEditorConfigs.maxWidthFactor ?? 1),
                     child: _buildBody(),
                   ),
                 ),
@@ -2029,22 +2028,24 @@ class CropCircleEditorState extends State<CropCircleEditor>
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         CupertinoButton(
-          padding: const EdgeInsets.symmetric(horizontal: 14),
+          padding:
+              EdgeInsets.symmetric(horizontal: Platform.isAndroid ? 15 : 14),
           onPressed: () => Navigator.pop(context),
-          child: const Icon(
-            CupertinoIcons.chevron_left,
+          child: Icon(
+            Platform.isAndroid ? Icons.arrow_back_rounded : CupertinoIcons.chevron_left,
             color: Colors.white,
-            size: 25,
+            size: Platform.isAndroid ? 27 : 25,
           ),
         ),
         CupertinoButton(
           onPressed: done,
-          padding: const EdgeInsets.symmetric(horizontal: 14),
+          padding:
+              EdgeInsets.symmetric(horizontal: Platform.isAndroid ? 15 : 14),
           child: Text(
             i18n.done,
-            style: const TextStyle(
+            style: TextStyle(
               color: Colors.white,
-              fontSize: 16,
+              fontSize: Platform.isAndroid ? 17 : 16,
             ),
           ),
         ),
