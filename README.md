@@ -1,17 +1,30 @@
 # crop_circle_editor
 
-원본 소스:  
-[https://github.com/hm21/pro_image_editor](https://github.com/hm21/pro_image_editor)
+`crop_circle_editor`는 프로필 이미지를 간편하게 크롭할 수 있도록 도와주는 Flutter 패키지입니다.  
 
-프로필 이미지에 맞게 크롭될 수 있도록 모양은 원형이지만,  
-이미지는 정사각형으로 크롭될수록 커스터마이징함.  
-네이버 카페의 프로필 이미지 UI와 유사하게 구현함.
+원본 소스는 [pro_image_editor](https://github.com/hm21/pro_image_editor)을 기반으로 하며, 사용자에게 보여지는 UI는 원형 크롭 영역을 제공하지만 실제 이미지는 정사각형으로 크롭되도록 커스터마이징했습니다.
+
+네이버 카페의 프로필 이미지 적용 UI를 참고하여 디자인되었습니다.
+
+---
+
+## 원본 소스
+
+- [pro_image_editor on GitHub](https://github.com/hm21/pro_image_editor)
+
+---
 
 ## 적용 이미지
 
-[https://something.png](https://something.png)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f5b52536-73a3-4c72-901b-77febcd994a8" alt="demo" width="250"/>
+</p>
+
+---
 
 ## 사용법
+
+아래의 코드를 참고하여 프로젝트에 `crop_circle_editor`를 적용해보세요:
 
 ```dart
 import 'dart:io';
