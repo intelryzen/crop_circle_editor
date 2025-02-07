@@ -1989,26 +1989,35 @@ class CropCircleEditorState extends State<CropCircleEditor>
             _updateAllStates();
           },
           child: LayoutBuilder(builder: (context, constraints) {
-            return AnnotatedRegion<SystemUiOverlayStyle>(
-              value: cropRotateEditorConfigs.style.uiOverlayStyle,
-              child: Theme(
-                data: theme.copyWith(
-                    tooltipTheme:
-                        theme.tooltipTheme.copyWith(preferBelow: true)),
-                child: Scaffold(
-                  resizeToAvoidBottomInset: false,
-                  backgroundColor: Colors.black,
-                  // appBar: _buildAppBar(constraints),
-                  body: Center(
-                    child: SizedBox(
-                      width: constraints.maxWidth *
-                          (cropRotateEditorConfigs.maxWidthFactor ??
-                              (!kIsWeb && Platform.isAndroid ? 0.9 : 1)),
-                      child: _buildBody(),
-                    ),
+            return Theme(
+              data: theme.copyWith(
+                brightness: Brightness.dark,
+                tooltipTheme: theme.tooltipTheme.copyWith(preferBelow: true),
+              ),
+              child: Scaffold(
+                resizeToAvoidBottomInset: false,
+                backgroundColor: Colors.black,
+                appBar: AppBar(
+                  toolbarHeight: 0,
+                  surfaceTintColor: Colors.transparent,
+                  backgroundColor: Colors.transparent,
+                  elevation: 0,
+                  scrolledUnderElevation: 0,
+                  systemOverlayStyle: const SystemUiOverlayStyle(
+                    statusBarIconBrightness: Brightness.dark,
+                    statusBarBrightness: Brightness.dark,
                   ),
-                  // bottomNavigationBar: _buildBottomAppBar(),
                 ),
+                // appBar: _buildAppBar(constraints),
+                body: Center(
+                  child: SizedBox(
+                    width: constraints.maxWidth *
+                        (cropRotateEditorConfigs.maxWidthFactor ??
+                            (!kIsWeb && Platform.isAndroid ? 0.9 : 1)),
+                    child: _buildBody(),
+                  ),
+                ),
+                // bottomNavigationBar: _buildBottomAppBar(),
               ),
             );
           }),
